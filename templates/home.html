@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>匿名搜索</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="icon" href="/static/imgs/logo.jpg" type="image/x-icon"/>
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.js"></script>
+</head>
+<body style="height: 0px;">
+
+<div id="search-container">
+    <div class="search-bar clearfix">
+        <input type="text" name="search-input" id="search-input" placeholder="匿名搜索" autofocus="autofocus">
+        <span id="search-btn">
+        </span>
+    </div>
+    <div class="suggesst-words" style="display: none;">
+        <ul>
+        </ul>
+    </div>
+</div>
+
+<div class="top-bar">
+
+</div>
+
+<div class="footer">
+
+</div>
+</div>
+
+<script>
+    window.onload = function (e) {
+        var _body = document.getElementsByTagName('body')[0];
+        _body.style.height = _body.clientHeight + "px";
+    }
+</script>
+<script type="text/javascript" charset="utf-8" async=""
+        src="/static/js/search.js"></script>
+<script type="text/javascript" charset="utf-8" async=""
+        src="https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js"></script>
+</body>
+<script type="text/javascript">
+    setTimeout(() => {
+        L2Dwidget.init({
+            "model": {
+                "scale": 0.5
+            },
+            "display": {
+                "position": "right",
+                "width": 180,
+                "height": 260,
+                "hOffset": 0,
+                "vOffset": -20
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    }, 1000)
+</script>
+</html>

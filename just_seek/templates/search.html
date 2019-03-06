@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>匿名搜索</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+    <link rel="icon" href="/static/imgs/logo.jpg" type="image/x-icon"/>
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.js"></script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        .wrapper {
+            height: 100%;
+        }
+
+        iframe {
+            box-sizing: border-box;
+            display: block;
+            overflow: hidden;
+        }
+
+        #search-btn {
+        {#float: left;#} display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            box-sizing: border-box;
+            background: url("/static/imgs/search.png") no-repeat center center;
+            background-size: 22px 22px;
+            text-align: center;
+            font-size: 16px;
+            color: #5992ff;
+            letter-spacing: 2px;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body style="height: 937px;">
+<div>
+    <input id="search-input" type="text" id="text" value="{{ search_word }}"
+           style="overflow: hidden; margin-bottom: 10px;  display: inline-block; height: 30px;"/>
+    <span id="search-btn"></span>
+</div>
+
+<div class="wrapper">
+    <iframe src="{{ sougou }}" width="50%" height="100%" style="float: left;"></iframe>
+    <iframe src="{{ bing }}" width="50%" height="100%" style="float: right;"></iframe>
+</div>
+</body>
+<script type="text/javascript" charset="utf-8" async=""
+        src="/static/js/search.js"></script>
+</html>

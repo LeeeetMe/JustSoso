@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <style type="text/css">
+        ol {
+            display: inline-block;
+            list-style-type: none;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-start: 40px;
+        }
+
+        ol {
+            border: 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #b_results {
+            line-height: 18px;
+            width: 648px;
+            color: #666;
+        }
+
+        #b_results > li:first-child {
+            padding-top: 10px;
+        }
+
+        #b_results > .b_algo {
+            /*padding: 12px 20px 0;*/
+        }
+
+        #b_results > li {
+            padding: 10px 20px;
+            margin: 0 0 2px;
+        }
+
+        #b_results > li {
+            background-color: #fff;
+        }
+
+        html,
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        img,
+        ol,
+        ul,
+        li,
+        form,
+        table,
+        tr,
+        th,
+        td {
+            border: 0;
+            border-collapse: collapse;
+            border-spacing: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+
+        h2 {
+            padding-bottom: 3px;
+        }
+
+        .b_caption {
+            padding-bottom: 3px;
+        }
+
+        #b_results p {
+            word-wrap: break-word;
+        }
+
+        .b_attribution {
+            color: #006d21;
+            padding-bottom: 0px;
+        }
+
+        p {
+            display: block;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+        }
+
+        h2 {
+            font-size: 20px !important;
+            line-height: 24px !important;
+        }
+
+        cite {
+            word-wrap: break-word;
+        }
+
+        cite {
+            font-style: normal;
+        }
+
+        body {
+            font: 13px/normal Arial, Helvetica;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-weight: normal;
+            font-stretch: normal;
+            font-size: 13px;
+            line-height: normal;
+            font-family: Arial, Helvetica;
+        }
+
+        #b_results > li a {
+            color: #001ba0;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font: 13px/1.2em 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-weight: normal;
+            font-stretch: normal;
+            font-size: 13px;
+            line-height: 1.2em;
+            font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <ol id="b_results">
+            {% for url_info in result %}
+                <li class="b_algo" data-bm="6">
+                    <h2><a target="_blank" href="{{ url_info.url }}"
+                           h="ID=SERP,5119.1">{{ url_info.title }}</a></h2>
+                    <div class="b_caption">
+                        {{ url_info.digest }}
+                        <div class="b_attribution" u="0|5053|4894911605507274|fbuTGQGmtsix8qKgymtDlgGt1uCQnHb0">
+                            <cite>{{ url_info.url }}</cite>
+                            <a href="#" aria-label="此网站的操作" aria-haspopup="true" role="button"><span
+                                    class="c_tlbxTrg"><span
+                                    class="c_tlbxTrgIcn sw_ddgn"></span><span class="c_tlbxH" h="BASE:CACHEDPAGEDEFAULT"
+                                                                              k="SERP,5120.1"></span></span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+
+        </ol>
+    </div>
+</div>
+</body>
+</html>
